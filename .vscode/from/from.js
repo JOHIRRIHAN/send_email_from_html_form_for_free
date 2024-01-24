@@ -1,9 +1,10 @@
 function mailSend(){
     let parms = {
-        name: document.getElementById('name').ariaValueMax,
-        email: document.getElementById('email').ariaValueMax,
-        subject: document.getElementById('subject').ariaValueMax,
-        message: document.getElementById('message').ariaValueMax,
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
     }
-    
+
+    emailjs.send("service_qe5hbep","template_ek2em98",parms).then(alert("email send!!"));
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form sent Mail</title>
+    <!-- css link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("p_BzoBRjpW27sgp-r");
+        })();
+        </script>
+
+</head>
+<body>
+    <form action="" method="POST">
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="subject">subject</label>
+        <input type="text" name="subject" id="subject" required>
+
+        <label for="message">message</label>
+        <textarea name="message" id="message"required></textarea>
+
+        <br>
+        <button onclick="mailSend()">Send</button>
+    </form>
+
+    <script src="from.js"></script>
+</body>
+</html>
